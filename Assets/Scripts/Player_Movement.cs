@@ -1,3 +1,5 @@
+using System.Diagnostics;
+using System;
 using System.Numerics;
 using System.Collections;
 using System.Collections.Generic;
@@ -5,45 +7,28 @@ using UnityEngine;
 
 public class Player_Movement : MonoBehaviour
 {
-    public float speed = 2f;
-    // Start is called before the first frame update
+    public float speed = 10f;
+    public float minX;
+    public float minY;
+    // 1.37 & -1.37
+    public float maxX;
+    public float maxY;
     void Start()
     {
         
     }
 
-    // Update is called once per frame
+    
     void Update()
-    {
-        //float deltaY = Input.GetAxis("Vertical");
-        float deltaX = Input.GetAxis("Horizontal") * Time.deltaTime * speed;
+    {        
+        
+        float deltaY = Input.GetAxis("Vertical")* Time.deltaTime * speed;
+        float deltaX = Input.GetAxis("Horizontal")* Time.deltaTime * speed;
 
-        //float newYpos = transform.position.y + deltaY;
-        float newXpos = transform.position.x + deltaX;
-
-        transform.position = new UnityEngine.Vector2(newXpos, transform.position.y);
-        /* Input.GetAxis("Horizontal");
-        Movment();
-        Clamp(); */
+        float newXpos =Mathf.Clamp(transform.position.x + deltaX,minX,maxX);
+        float newYpos = Mathf.Clamp(transform.position.y + deltaY,minY,maxY);
+        transform.position = new UnityEngine.Vector2(newXpos, newYpos);  
     }
 
-    /* void Movment() {
-        if (Input.GetKey(KeyCode.RightArrow) || Input.KeyCode.D) {
-            transform.position += new Vector3(speed * Time.deltaTime ,0,0);
-        }
-
-         if (Input.GetKey(KeyCode.LeftArrow) || Input.KeyCode.A) {
-            transform.position -= new Vector3(speed * Time.deltaTime ,0,0);
-        }
-
-        if (transform.rotation.z != 90) {
-             transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.Euler(0,0,90), rotationSpeed * Time.deltaTime);
-        }
-    }
-
-    void Clamp() {
-        Vector3 pos = transform.position;
-        pos.x = Mathf.Clamp(pos.x,minX, maxX);
-        transform.position = pos;
-    } */
+     
 }

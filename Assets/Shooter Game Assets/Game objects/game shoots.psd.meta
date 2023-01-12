@@ -42,12 +42,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 270
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -115,7 +115,217 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: game shoots_3
+      rect:
+        serializedVersion: 2
+        x: 445
+        y: 395
+        width: 36
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d98785f36e5014b4985947a600a3d219
+      internalID: 334608210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: game shoots_10
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 393
+        width: 101
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72b881e4281fd6343b76a26782da782f
+      internalID: -862522698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: game shoots_16
+      rect:
+        serializedVersion: 2
+        x: 578
+        y: 421
+        width: 102
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3bbc50b68b160a54e9c362fa6d09ab50
+      internalID: 1216340495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: game shoots_22
+      rect:
+        serializedVersion: 2
+        x: 233
+        y: 408
+        width: 54
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87eb65698f8548949ab5945b8982b796
+      internalID: 1462064941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: game shoots_55
+      rect:
+        serializedVersion: 2
+        x: 412
+        y: 231
+        width: 98
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d18e70d883162c42ad137af7052832f
+      internalID: 599057532
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: game shoots_56
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 201
+        width: 47
+        height: 132
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88de3fc0215aa044a800a36122020249
+      internalID: -264696838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: game shoots_59
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 232
+        width: 90
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d5996bf40bab7b47abe009ea8677c32
+      internalID: -1295875544
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: game shoots_72
+      rect:
+        serializedVersion: 2
+        x: 435
+        y: 34
+        width: 40
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e45dd8a1fd8a4394ba95f430d0559fd4
+      internalID: -887421909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: game shoots_73
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 26
+        width: 48
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6732f2405594bb743907494ce60a3a50
+      internalID: 1346174178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: game shoots_77
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 21
+        width: 92
+        height: 152
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99299cd0d6644b24d81a8f58c272ffc4
+      internalID: -1999640723
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -126,10 +336,105 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      game shoots_17: -177962674
+      game shoots_78: -908577387
+      game shoots_41: -1671924700
+      game shoots_49: 1803967643
+      game shoots_15: -278140066
+      game shoots_11: -267725181
+      game shoots_72: -887421909
+      game shoots_53: -918971353
+      game shoots_12: -172758733
+      game shoots_26: 378974722
+      game shoots_18: 972113219
+      game shoots_45: 772142038
+      game shoots_34: 2076484094
+      game shoots_28: -799475758
+      game shoots_29: 142195314
+      game shoots_68: -364730942
+      game shoots_56: -264696838
+      game shoots_59: -1295875544
+      game shoots_33: 439150504
+      game shoots_22: 1462064941
+      game shoots_0: 875234407
+      game shoots_86: -1767223201
+      game shoots_57: -425019752
+      game shoots_32: 1451333756
+      game shoots_77: -1999640723
+      game shoots_87: 194744281
+      game shoots_2: 1269434447
+      game shoots_21: -1933044285
+      game shoots_51: 1514041044
+      game shoots_75: 1270586721
+      game shoots_31: -1665473192
+      game shoots_14: -1956491732
+      game shoots_62: 253685741
+      game shoots_6: 618501305
+      game shoots_1: -153513876
+      game shoots_25: -593195664
+      game shoots_24: -772530248
+      game shoots_71: 202618501
+      game shoots_60: 729629525
+      game shoots_94: -1693273098
+      game shoots_83: -2050461318
+      game shoots_88: 1911949826
+      game shoots_73: 1346174178
+      game shoots_4: -970400877
+      game shoots_8: 981636559
+      game shoots_85: -1868826687
+      game shoots_92: 2125735653
+      game shoots_67: -114006614
+      game shoots_74: -1665936173
+      game shoots_9: -203907878
+      game shoots_50: -507762611
+      game shoots_76: 478751982
+      game shoots_13: -670361853
+      game shoots_61: 1133616724
+      game shoots_20: -55485048
+      game shoots_84: -284724438
+      game shoots_16: 1216340495
+      game shoots_43: 333387839
+      game shoots_3: 334608210
+      game shoots_38: -339800275
+      game shoots_42: -723529648
+      game shoots_64: 1894599471
+      game shoots_19: -923456060
+      game shoots_55: 599057532
+      game shoots_46: -647525357
+      game shoots_5: 1605148035
+      game shoots_30: -330878530
+      game shoots_36: 1656838722
+      game shoots_23: -755477899
+      game shoots_54: -748461288
+      game shoots_79: 626387243
+      game shoots_80: -1051020678
+      game shoots_69: -977556375
+      game shoots_63: 1065231976
+      game shoots_81: 1770713291
+      game shoots_91: -1916561127
+      game shoots_93: 1841689800
+      game shoots_70: 1844637329
+      game shoots_89: -1416326341
+      game shoots_39: 35669512
+      game shoots_52: 360278557
+      game shoots_40: 1829479497
+      game shoots_10: -862522698
+      game shoots_27: -1079793815
+      game shoots_82: -674296910
+      game shoots_58: 1438144521
+      game shoots_47: 357679150
+      game shoots_48: -1090633591
+      game shoots_90: -1625041188
+      game shoots_66: 1936896642
+      game shoots_35: 1936699363
+      game shoots_7: -369327876
+      game shoots_44: -1541503641
+      game shoots_37: 2079786441
+      game shoots_65: 456750643
   spritePackingTag: 
   pSDRemoveMatte: 0
-  pSDShowRemoveMatteOption: 0
+  pSDShowRemoveMatteOption: 1
   userData: 
   assetBundleName: 
   assetBundleVariant: 
