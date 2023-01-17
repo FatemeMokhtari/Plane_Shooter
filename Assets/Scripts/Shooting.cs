@@ -31,7 +31,7 @@ public class Shooting : MonoBehaviour
             {
                   yield return new WaitForSeconds(BulletSpawnTime);
                   Fire();
-                  StartCoroutine(shoot());                  
+                  //StartCoroutine(shoot());                  
             }
 
       }

@@ -4,15 +4,16 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
+      public GameObject CoinPrefab;
       public GameObject EnemyBullet;
       public GameObject EnemyExplosionPrefab;
-      public Transform GunPointer1;
-      public Transform GunPointer2;
+      public Transform[] GunPoint;
       public float EnemyBulletTime = 0.5f;
       public float speed = 1f;
+      public GameObject damageEffect;
 
       public Healthbar healthbar;
-      public float health = 10f;
+      public float health = 20f;
       float barSize = 1f;
       float damage = 0;
       void Start()
@@ -39,8 +40,12 @@ public class Enemy : MonoBehaviour
             {
                   DamageHealthbar();
                   Destroy(other.gameObject);
+                  GameObject damageVfx = Instantiate(damageEffect, other.transform.position, UnityEngine.Quaternion.identity);
+                  Destroy(damageVfx, 0.05f);
+
                   if (health <= 0)
                   {
+                        Instantiate(CoinPrefab, transform.position, UnityEngine.Quaternion.identity);
                         Destroy(gameObject);
                         GameObject EnemyExplosion = Instantiate(EnemyExplosionPrefab, transform.position, UnityEngine.Quaternion.identity);
                         Destroy(EnemyExplosion, 0.4f);
@@ -50,8 +55,12 @@ public class Enemy : MonoBehaviour
       }
       void EnemyFire()
       {
-            Instantiate(EnemyBullet, GunPointer1.position, UnityEngine.Quaternion.identity);
-            Instantiate(EnemyBullet, GunPointer2.position, UnityEngine.Quaternion.identity);
+            for (int i = 0; i < GunPoint.Length; i++)
+            {
+                  Instantiate(EnemyBullet, GunPoint[i].position, UnityEngine.Quaternion.identity);
+            }
+            //Instantiate(EnemyBullet, GunPointer1.position, UnityEngine.Quaternion.identity);
+            //Instantiate(EnemyBullet, GunPointer2.position, UnityEngine.Quaternion.identity);
       }
 
       IEnumerator Enemyshooting()

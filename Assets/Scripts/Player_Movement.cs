@@ -15,9 +15,11 @@ public class Player_Movement : MonoBehaviour
       public float maxY;
 
       public GameObject Explotion;
-
+      public GameObject damageEffect;
 
       public PlayerHealthbar playerHealthbar;
+
+      public CoinCount CoinCountScript;
       public float health = 20f;
       float BarFillAmount = 1f;
       float damage = 0;
@@ -40,17 +42,24 @@ public class Player_Movement : MonoBehaviour
 
       private void OnTriggerEnter2D(Collider2D other)
       {
-            if (other.tag == "EnemyBullet")
+            if (other.gameObject.tag == "EnemyBullet")
             {
-                    DamagePlayerHealthbar();
-                   Destroy(other.gameObject);
-                   if (health <= 0)
-                   {
-                  Destroy(gameObject);
-                  GameObject blast = Instantiate(Explotion, transform.position, UnityEngine.Quaternion.identity);
-                  Destroy(blast, 2f);
-                  } 
+                  DamagePlayerHealthbar();
+                  Destroy(other.gameObject);
+                  GameObject damageVfx = Instantiate(damageEffect, other.transform.position, UnityEngine.Quaternion.identity);
+                  Destroy(damageVfx, 0.05f);
+                  if (health <= 0)
+                  {
+                        Destroy(gameObject);
+                        GameObject blast = Instantiate(Explotion, transform.position, UnityEngine.Quaternion.identity);
+                        Destroy(blast, 2f);
+                  }
+            }
 
+            if (other.gameObject.tag == "Coin")
+            {
+                  Destroy(other.gameObject);
+                  CoinCountScript.AddCount();
             }
       }
 
