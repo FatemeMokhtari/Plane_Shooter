@@ -23,6 +23,11 @@ public class Player_Movement : MonoBehaviour
       public float health = 20f;
       float BarFillAmount = 1f;
       float damage = 0;
+
+      public AudioSource audioSource;
+      public AudioClip damageSound;
+      public AudioClip ExplosionSound;
+      public AudioClip CoinSound;
       void Start()
       {
             damage = BarFillAmount / health;
@@ -31,8 +36,10 @@ public class Player_Movement : MonoBehaviour
 
       void Update()
       {
+            
 
             float deltaY = Input.GetAxis("Vertical") * Time.deltaTime * speed;
+            UnityEngine.Debug.Log(Input.GetAxis("Horizontal"));
             float deltaX = Input.GetAxis("Horizontal") * Time.deltaTime * speed;
 
             float newXpos = Mathf.Clamp(transform.position.x + deltaX, minX, maxX);
@@ -44,12 +51,14 @@ public class Player_Movement : MonoBehaviour
       {
             if (other.gameObject.tag == "EnemyBullet")
             {
+                  audioSource.PlayOneShot(damageSound,0.5f);
                   DamagePlayerHealthbar();
                   Destroy(other.gameObject);
                   GameObject damageVfx = Instantiate(damageEffect, other.transform.position, UnityEngine.Quaternion.identity);
                   Destroy(damageVfx, 0.05f);
                   if (health <= 0)
                   {
+                        AudioSource.PlayClipAtPoint(ExplosionSound,Camera.main.transform.position,0.5f);
                         Destroy(gameObject);
                         GameObject blast = Instantiate(Explotion, transform.position, UnityEngine.Quaternion.identity);
                         Destroy(blast, 2f);
@@ -58,6 +67,7 @@ public class Player_Movement : MonoBehaviour
 
             if (other.gameObject.tag == "Coin")
             {
+                  audioSource.PlayOneShot(CoinSound,0.5f);
                   Destroy(other.gameObject);
                   CoinCountScript.AddCount();
             }

@@ -11,6 +11,8 @@ public class Shooting : MonoBehaviour
       public Transform SpawnPointer1;
       public Transform SpawnPointer2;
       public float BulletSpawnTime = 1f;
+
+      public AudioSource audioSource;
       void Start()
       {
             StartCoroutine(shoot());
@@ -30,6 +32,7 @@ public class Shooting : MonoBehaviour
             while (true)
             {
                   yield return new WaitForSeconds(BulletSpawnTime);
+                  audioSource.Play();
                   Fire();
                   //StartCoroutine(shoot());                  
             }

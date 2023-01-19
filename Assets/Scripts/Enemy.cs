@@ -16,6 +16,12 @@ public class Enemy : MonoBehaviour
       public float health = 20f;
       float barSize = 1f;
       float damage = 0;
+
+      public AudioSource audioSource;
+      public AudioClip BulletSound;
+      public AudioClip damageSound;
+      public AudioClip ExplosionSound;
+      
       void Start()
       {
             StartCoroutine(Enemyshooting());
@@ -38,6 +44,7 @@ public class Enemy : MonoBehaviour
       {
             if (other.tag == "PlayerBullet")
             {
+                  audioSource.PlayOneShot(damageSound);
                   DamageHealthbar();
                   Destroy(other.gameObject);
                   GameObject damageVfx = Instantiate(damageEffect, other.transform.position, UnityEngine.Quaternion.identity);
@@ -45,6 +52,7 @@ public class Enemy : MonoBehaviour
 
                   if (health <= 0)
                   {
+                        AudioSource.PlayClipAtPoint(ExplosionSound,Camera.main.transform.position,0.5f);
                         Instantiate(CoinPrefab, transform.position, UnityEngine.Quaternion.identity);
                         Destroy(gameObject);
                         GameObject EnemyExplosion = Instantiate(EnemyExplosionPrefab, transform.position, UnityEngine.Quaternion.identity);
@@ -69,6 +77,7 @@ public class Enemy : MonoBehaviour
             {
                   yield return new WaitForSeconds(EnemyBulletTime);
                   EnemyFire();
+                  audioSource.PlayOneShot(BulletSound, 0.5f);
             }
 
       }
