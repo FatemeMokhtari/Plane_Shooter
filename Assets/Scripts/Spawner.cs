@@ -32,7 +32,7 @@ public class Spawner : MonoBehaviour
       void SpawnEnemy()
       {
             int RandValue = UnityEngine.Random.Range(0, Enemy.Length);
-            int RandPosValue = UnityEngine.Random.Range(2, -2);
+            float RandPosValue = UnityEngine.Random.Range(1.3f, -1.3f);
             Instantiate(Enemy[RandValue], new UnityEngine.Vector2(RandPosValue, transform.position.y), UnityEngine.Quaternion.identity);
 
 
